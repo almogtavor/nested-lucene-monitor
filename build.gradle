@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springdoc:springdoc-openapi-ui:1.6.14'
+    implementation 'org.springdoc:springdoc-openapi-webflux-core:1.6.14'
+    implementation 'org.springdoc:springdoc-openapi-webflux-ui:1.6.14'
+
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:2.7.4'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.7.4'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator:2.7.4'
+    implementation 'org.springframework.boot:spring-boot-configuration-processor:2.7.4'
+
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor:2.7.4'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.4'
+    implementation('org.springframework.boot:spring-boot-starter-validation:2.7.4') {
+        exclude group: "org.springframework.boot", module: "spring-boot-starter-tomcat"
+    }
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'org.apache.lucene:lucene-monitor:8.8.1'
+    implementation 'org.apache.lucene:lucene-queries:8.8.1'
+    implementation("org.apache.lucene:lucene-core:8.8.1")
+    implementation("org.apache.lucene:lucene-join:8.8.1")
+    implementation("org.apache.lucene:lucene-queries:8.8.1")
+    implementation("org.apache.lucene:lucene-memory:8.8.1")
+    implementation("org.apache.lucene:lucene-monitor:8.8.1")
+    implementation("org.apache.lucene:lucene-backward-codecs:8.8.1")
+    implementation("org.apache.lucene:lucene-test-framework:8.8.1")
+    implementation("org.apache.lucene:lucene-queryparser:8.8.1")
+    implementation("org.apache.lucene:lucene-backward-codecs:8.8.1")
+    implementation("org.apache.lucene:lucene-codecs:8.8.1")
+}
+
+test {
+    useJUnitPlatform()
+}

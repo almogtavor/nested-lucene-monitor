@@ -1,0 +1,4 @@
+rootProject.name = 'nested-lucene-monitor'
+
+include "elastic-percolator"
+include "elastic-percolator-rest-high-level-client"
